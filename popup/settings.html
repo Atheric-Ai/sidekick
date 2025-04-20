@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sidekick Settings</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0 0 20px 0;
+      color: #030303;
+    }
+
+    .settings-section {
+      margin-bottom: 24px;
+    }
+
+    .settings-section h2 {
+      font-size: 16px;
+      margin: 0 0 12px 0;
+      color: #030303;
+    }
+
+    .provider-select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+
+    .api-key-input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 8px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+
+    .save-button {
+      background: #065fd4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 18px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    .save-button:hover {
+      background: #0356c6;
+    }
+
+    .status-message {
+      margin-top: 12px;
+      padding: 8px;
+      border-radius: 4px;
+      display: none;
+    }
+
+    .status-message.success {
+      background: #e6f4ea;
+      color: #137333;
+      display: block;
+    }
+
+    .status-message.error {
+      background: #fce8e6;
+      color: #c5221f;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sidekick Settings</h1>
+
+  <div class="settings-section">
+    <h2>LLM Provider</h2>
+    <select id="provider-select" class="provider-select">
+      <option value="anthropic">Anthropic Claude</option>
+      <option value="gemini">Google Gemini</option>
+    </select>
+
+    <div id="anthropic-settings">
+      <input type="password" id="anthropic-api-key" class="api-key-input" placeholder="Enter Anthropic API Key">
+    </div>
+
+    <div id="gemini-settings">
+      <input type="password" id="gemini-api-key" class="api-key-input" placeholder="Enter Gemini API Key">
+    </div>
+
+    <button id="save-settings" class="save-button">Save Settings</button>
+    <div id="status-message" class="status-message"></div>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html> 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sidekick for YouTube</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin: 0 0 16px 0;
+      color: #030303;
+    }
+    
+    p {
+      margin: 0 0 16px 0;
+      color: #606060;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    
+    .instructions {
+      background: #f8f8f8;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    
+    .instructions ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .instructions li {
+      margin: 8px 0;
+      color: #606060;
+      font-size: 14px;
+    }
+
+    .settings-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #065fd4;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .settings-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sidekick for YouTube</h1>
+  <p>Generate AI-powered summaries of YouTube videos directly in your browser!</p>
+  
+  <div class="instructions">
+    <ol>
+      <li>Navigate to any YouTube video</li>
+      <li>Right-click on the page</li>
+      <li>Select "Summarize Video"</li>
+      <li>View your summary in the sidebar</li>
+    </ol>
+  </div>
+  
+  <p>The summary will appear in a sidebar, where you can also download the transcript and summary.</p>
+  
+  <a href="settings.html" class="settings-link">Configure LLM Settings ⚙️</a>
+
+  <script src="popup.js"></script>
+</body>
+</html> 

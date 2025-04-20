@@ -1,0 +1,155 @@
+#yt-summary-sidebar {
+  position: fixed;
+  /* top is set dynamically in JS */
+  right: 0;
+  /* width is set dynamically in JS */
+  /* height is set dynamically in JS */
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2001;
+  display: none;
+  font-family: 'Roboto', sans-serif;
+  border-left: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+  overflow: hidden; /* Ensure no content spills out */
+}
+
+#summary-toggle-button {
+  position: fixed;
+  right: 0;
+  /* top is set dynamically in JS */
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  padding: 8px 6px;
+  cursor: pointer;
+  z-index: 2001; /* Match sidebar z-index */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  transition: all 0.2s ease;
+  opacity: 0;
+  font-size: 14px;
+  color: #606060;
+  height: 32px; /* Match YouTube's button height */
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0);
+}
+
+#summary-toggle-button:hover {
+  background: #f2f2f2;
+  color: #030303;
+  box-shadow: -3px 0 12px rgba(0, 0, 0, 0.15);
+  transform: translateX(-2px);
+}
+
+#summary-toggle-button.visible {
+  display: flex;
+  opacity: 1;
+}
+
+#yt-summary-sidebar.visible {
+  display: block;
+  opacity: 1;
+}
+
+#yt-summary-sidebar.collapsed {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.sidebar-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  height: 25px; /* Fixed height to match YouTube's headers */
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #030303;
+}
+
+#close-sidebar {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #606060;
+  padding: 4px 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+#close-sidebar:hover {
+  background-color: #f2f2f2;
+  color: #030303;
+}
+
+.sidebar-content {
+  padding: 16px;
+  height: calc(100% - 53px); /* Account for header height */
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: white;
+  overscroll-behavior: contain;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#summary-content {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #030303;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.download-options {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  margin: 0 -16px;
+  border-top: 1px solid #e0e0e0;
+  background: white;
+  z-index: 1;
+}
+
+.download-options button {
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 18px;
+  background: #065fd4;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  margin-bottom: 8px;
+}
+
+.download-options button:last-child {
+  margin-bottom: 0;
+}
+
+.download-options button:hover {
+  background: #0356c6;
+}
+
+/* Remove the global margin adjustment */
+/* #secondary.ytd-watch-flexy {
+  margin-right: 400px;
+} */ 
